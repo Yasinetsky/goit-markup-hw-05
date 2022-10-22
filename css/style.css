@@ -260,8 +260,22 @@ header {
 
 .about-item:not(:last-child) {
   margin-right: 30px;
-
 }
+
+.about-list {
+  position: relative;
+}
+.label {
+    top: 120px;
+      left: 120px;
+    position: absolute;
+    color: var(--primary-color-white);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    background: rgba(47, 48, 58, 0.8);
+}
+
 
 /* Team  */
 
