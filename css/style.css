@@ -566,6 +566,16 @@ display: inline-block;
   margin-top: 0;
   margin-bottom: 0;
 }
+/* 
+.portfolio-overlay {
+    position: relative;
+}
+
+.portfolio-overlay-text {
+  position: absolute;
+} */
+
+
 
 .container {
   width: 1200px;
