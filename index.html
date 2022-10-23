@@ -61,7 +61,15 @@
           ЕФЕКТИВНІ РІШЕННЯ ДЛЯ <br/>
           ВАШОГО БІЗНЕСУ
         </h1>
-        <button type="button" class="button second button">Замовити послугу</button>
+        <button type="button" class="button second button" data-modal-open>Замовити послугу</button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <svg class="icon-close" data-modal-close width="11px" height="11px">
+              <use href="./images/icons.svg#close-black">
+              </use>
+            </svg>  
+          </div>
+        </div>
       </section>
       <!-- Features -->
       <section class="section features">
