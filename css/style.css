@@ -9,6 +9,7 @@
 /* цвет границы блока */
 
 :root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --primery-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
@@ -80,9 +81,6 @@ header {
   margin-bottom: auto;
 }
 
-.logo:focus {
-  color: var(--accent-color);
-}
 
 .web {
   color: var(--color-black);
@@ -107,6 +105,7 @@ header {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: color 250ms var(--timing-function);
 }
 
 .site-nav .link:hover,
@@ -138,6 +137,7 @@ header {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition: color 250ms var(--timing-function);
 }
 
 .contacts-nav .contacts:hover,
@@ -229,6 +229,7 @@ header {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  /* transition: opacity 1250ms var(--timing-function); */
 }
 
 .modal {
@@ -388,16 +389,18 @@ header {
   display: flex;
   width: 40px;
   height: 40px;
+  border-radius: 50%;
   justify-content: center;
   align-items: center;
   fill: var(--icon-border-color);
+  transition: fill 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .social-link:hover,
 .social-link:focus {
   cursor: pointer;
   background-color: var(--accent-color);
-  border-radius: 50%;
   fill: var(--primary-color-white);
 }
 
@@ -421,6 +424,7 @@ header {
   border: 1px solid var(--icon-border-color);
   border-radius: 4px;
   fill: var(--icon-border-color);
+  transition: fill 250ms var(--timing-function);
 }
 
 .clients-link:hover,
@@ -492,6 +496,8 @@ display: inline-block;
   fill: var(--primary-color-white);
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  transition: fill 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 }
 
 .footer-social .social-link:hover,
@@ -514,6 +520,9 @@ display: inline-block;
   font-family: inherit;
   cursor: pointer;
   text-align: center;
+
+  transition: color 250ms var(--timing-function);
+  transition: background-color 250ms var(--timing-function);
 
 }
 
@@ -565,8 +574,12 @@ display: inline-block;
 .project-group {
   display: flex;
   flex-wrap: wrap;
+  transition: box-shadow 250ms var(--timing-function);
 }
-
+.project-group .item {
+  box-shadow: 0;
+  transition: box-shadow 250ms var(--timing-function);
+}
 .project-group .item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -619,6 +632,7 @@ display: inline-block;
 
 .portfolio-overlay {
     position: relative;
+    overflow: hidden;
 }
 
 .portfolio-overlay::before {
@@ -629,11 +643,14 @@ display: inline-block;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
   opacity: 0;
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
 }
 
 .project-group .item:hover .portfolio-overlay::before,
 .project-group .item:hover .portfolio-overlay-text p {
   opacity: 1;
+  transform: translateY(0%);
 }
 
 .portfolio-overlay .portfolio-overlay-text p {
@@ -648,6 +665,8 @@ display: inline-block;
   letter-spacing: 0.03em;
   color: var(--primary-color-white);
   opacity: 0;
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
 }
 
 .container {
