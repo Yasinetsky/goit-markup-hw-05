@@ -566,16 +566,39 @@ display: inline-block;
   margin-top: 0;
   margin-bottom: 0;
 }
-/* 
+
 .portfolio-overlay {
     position: relative;
 }
 
-.portfolio-overlay-text {
+.portfolio-overlay::before {
   position: absolute;
-} */
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+}
 
+.project-group .item:hover .portfolio-overlay::before,
+.project-group .item:hover .portfolio-overlay-text p {
+  opacity: 1;
+}
 
+.portfolio-overlay .portfolio-overlay-text p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 63px 24px;
+  width: 322px;
+  height: 168px;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--primary-color-white);
+  opacity: 0;
+}
 
 .container {
   width: 1200px;
