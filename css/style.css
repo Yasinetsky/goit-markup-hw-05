@@ -228,6 +228,10 @@ header {
   opacity: 1;
 }
 
+.backdrop.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -242,7 +246,10 @@ header {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate( -50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--timing-function);
+
+
 }
 
 .icon-close {
@@ -255,6 +262,7 @@ header {
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--primary-color-white);
+  padding: 5px;
 }
 /* Features */
 
